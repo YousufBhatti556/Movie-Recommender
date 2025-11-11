@@ -1,0 +1,17 @@
+pandas 
+numpy 
+Flask
+matplotlib
+seaborn
+python-dotenv
+pymongo
+pymongo
+certifi
+scikit-learn
+dotenv
+pyaml
+mlflow
+dagshub
+fastapi
+uvicorn
+# -e .
