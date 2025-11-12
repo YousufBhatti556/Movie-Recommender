@@ -1,6 +1,6 @@
 import sys, os
-from logging.logging import logging
-class NetworkSecurityException(Exception):
+from src.logging.logger import logging
+class CustomException(Exception):
     def __init__(self, error_message, error_detail : sys):
         self.error_message = error_message
         _, _, exc_tb = error_detail.exc_info()
