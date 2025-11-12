@@ -1,0 +1,7 @@
+[ 2025-11-13 00:42:25,757 ] - 16 - INFO - \u2705 Data Ingestion completed successfully
+[ 2025-11-13 00:42:25,757 ] - 66 - INFO - Reading from the data ingestion_artifacts ie final_data
+[ 2025-11-13 00:42:26,381 ] - 69 - INFO - Removing the unnecessary columns
+[ 2025-11-13 00:42:26,381 ] - 72 - INFO - Dropping the null values
+[ 2025-11-13 00:42:26,381 ] - 75 - INFO - Processing the text columns to obtain meaningful informations
+[ 2025-11-13 00:42:26,381 ] - 110 - INFO - error occured in python script [D:\Movie-Recommender\src\components\data_preprocessing.py] line number [77] error message [DataProcessing.get_genres() takes 1 positional argument but 2 were given]
+[ 2025-11-13 00:42:26,381 ] - 31 - ERROR - Pipeline failed: error occured in python script [D:\Movie-Recommender\src\components\data_preprocessing.py] line number [77] error message [DataProcessing.get_genres() takes 1 positional argument but 2 were given]

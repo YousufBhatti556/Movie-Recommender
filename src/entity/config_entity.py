@@ -17,6 +17,12 @@ class DataIngestionConfig:
         self.data_ingestion_dir = os.path.join(training_pipeline_config.artifact_dir, training_pipeline.DATA_INGESTION_DIR_NAME)
         self.movies_data_path = os.path.join(self.data_ingestion_dir, "movies.csv")
         self.credits_data_path = os.path.join(self.data_ingestion_dir, "credits.csv")
-        self.final_data_path = os.path.join(self.data_ingestion_dir, "final_data.csv")
+        self.final_data_path = os.path.join(self.data_ingestion_dir, training_pipeline.FINAL_DATA)
+
+
+class DataProcessingConfig:
+    def __init__(self, training_pipeline_config: TrainingPipelineConfig):
+        self.data_processing_dir = os.path.join(training_pipeline_config.artifact_dir, training_pipeline.DATA_PROCESSING_DIR_NAME)
+        self.final_df = os.path.join(self.data_processing_dir, "final_df.csv")
 
         

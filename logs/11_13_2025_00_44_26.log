@@ -1,0 +1,8 @@
+[ 2025-11-13 00:44:28,533 ] - 16 - INFO - \u2705 Data Ingestion completed successfully
+[ 2025-11-13 00:44:28,533 ] - 66 - INFO - Reading from the data ingestion_artifacts ie final_data
+[ 2025-11-13 00:44:29,171 ] - 69 - INFO - Removing the unnecessary columns
+[ 2025-11-13 00:44:29,171 ] - 72 - INFO - Dropping the null values
+[ 2025-11-13 00:44:29,171 ] - 75 - INFO - Processing the text columns to obtain meaningful informations
+[ 2025-11-13 00:44:37,621 ] - 91 - INFO - Add all these columns into 1
+[ 2025-11-13 00:44:37,637 ] - 110 - INFO - error occured in python script [D:\Movie-Recommender\src\components\data_preprocessing.py] line number [94] error message ["['Tags'] not in index"]
+[ 2025-11-13 00:44:37,637 ] - 31 - ERROR - Pipeline failed: error occured in python script [D:\Movie-Recommender\src\components\data_preprocessing.py] line number [94] error message ["['Tags'] not in index"]
