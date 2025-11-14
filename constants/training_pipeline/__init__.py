@@ -17,6 +17,6 @@ COLUMNS = ['movie_id','title','overview','genres','keywords','cast','crew']
 
 
 
-RECOMMENDER_DIR_NAME = "Recommender"
-RECOMMENDER_VECTORIZER_DIR_NAME = "Vectorizer"
-RECOMMENDER_SIMILARITYMATRIX_DIR_NAME = "SIMILARITY_MATRIX"
+RECOMMENDER_DIR_NAME = "recommender"
+RECOMMENDER_VECTORIZER_DIR_NAME = "vectorizer"
+RECOMMENDER_SIMILARITYMATRIX_DIR_NAME = "similarity_matrix"

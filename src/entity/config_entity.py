@@ -32,5 +32,6 @@ class RecommenderTrainingConfig:
         self.vectorizer_path = os.path.join(self.recommender_dir, training_pipeline.RECOMMENDER_VECTORIZER_DIR_NAME)
         self.similarity_matrix_path = os.path.join(self.recommender_dir, training_pipeline.RECOMMENDER_SIMILARITYMATRIX_DIR_NAME)
 
-
-        
+class RecommendationConfig:
+    def __init__(self, num_recommendations=5):
+        self.num_recommendations = num_recommendations

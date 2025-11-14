@@ -5,19 +5,21 @@ from src.entity.config_entity import (
     TrainingPipelineConfig,
     DataIngestionConfig,
     DataProcessingConfig,
-    RecommenderTrainingConfig
+    RecommenderTrainingConfig,
+    RecommendationConfig
 )
 
 from src.entity.artifact_entity import (
     DataIngestionArtifacts,
     DataProcessingArtifacts,
-    RecomendeTrainingrArtifacts
+    RecomenderTrainingrArtifacts,
+    RecoomendArtifacts
 )
 
 from src.components.data_ingestion import Data_Ingestion
 from src.components.data_preprocessing import DataProcessing
-from src.components.RecommenderTraining import Recommender
-
+from src.components.recommender_training import RecommenderTraining
+from src.components.recommend import RecommenderService
 import sys
 
 
@@ -29,7 +31,8 @@ if __name__ == "__main__":
         training_pipeline_config = TrainingPipelineConfig()
         data_ingestion_config = DataIngestionConfig(training_pipeline_config)
         data_processing_config = DataProcessingConfig(training_pipeline_config)
-        recommender_config = RecommenderTrainingConfig(training_pipeline_config)
+        recommender_training_config = RecommenderTrainingConfig(training_pipeline_config)
+        recommendation_config = RecommendationConfig(num_recommendations=5)
 
         # DATA INGESTION
         ingestion = Data_Ingestion(data_ingestion_config)
@@ -40,10 +43,19 @@ if __name__ == "__main__":
         processing_artifacts = processing.initiate_processing()
 
         # MODEL RECOMMENDER TRAINING
-        recommender = Recommender(training_pipeline_config, recommender_config, processing_artifacts)
-        recommender_artifacts = recommender.initiate_recommendation()
+        recommender_training = RecommenderTraining(training_pipeline_config, recommender_training_config, processing_artifacts)
+        recommender_training_artifacts = recommender_training.initiate_recommendation_training()
 
         logging.info("========== PIPELINE FINISHED SUCCESSFULLY ==========")
+
+        # RECOMMENDATION
+        recommendation = RecommenderService(data_processing_artifacts=processing_artifacts, training_artifacts=recommender_training_artifacts, recommendation_config=recommendation_config)
+        recommendation_artifacts = recommendation.recommend_movie("Batman")
+
+        print(recommendation_artifacts)
+
+        
+        logging.info("End of project")
 
     except Exception as e:
         logging.info(CustomException(e, sys))

@@ -13,6 +13,10 @@ class DataProcessingArtifacts:
     final_df: str
 
 @dataclass
-class RecomendeTrainingrArtifacts:
+class RecomenderTrainingrArtifacts:
     similarity_matrix_path : str
     vectorizer_path : str
+
+@dataclass
+class RecoomendArtifacts:
+    movies : list
