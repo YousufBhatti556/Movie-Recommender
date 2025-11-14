@@ -8,9 +8,16 @@ __pycache__/
 *.pyo
 *.pyd
 
+artifacts/
+*/artifacts/
+*.pkl
+*.npy
+SIMILARITY_MATRIX
+
 # Jupyter notebook checkpoints
 .ipynb_checkpoints/
 
 # OS / system files
 .DS_Store
 Thumbs.db
+
