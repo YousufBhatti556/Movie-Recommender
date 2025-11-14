@@ -1,8 +1,0 @@
-[ 2025-11-13 00:46:39,964 ] - 16 - INFO - \u2705 Data Ingestion completed successfully
-[ 2025-11-13 00:46:39,964 ] - 67 - INFO - Reading from the data ingestion_artifacts ie final_data
-[ 2025-11-13 00:46:41,588 ] - 70 - INFO - Removing the unnecessary columns
-[ 2025-11-13 00:46:41,588 ] - 73 - INFO - Dropping the null values
-[ 2025-11-13 00:46:41,588 ] - 76 - INFO - Processing the text columns to obtain meaningful informations
-[ 2025-11-13 00:46:49,822 ] - 92 - INFO - Add all these columns into 1
-[ 2025-11-13 00:46:49,962 ] - 27 - INFO - \u2705 Data Processing completed successfully
-[ 2025-11-13 00:46:49,962 ] - 28 - INFO - Final processed CSV: Movie_Recommender\artifacts\data_processing\final_df.csv

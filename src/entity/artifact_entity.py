@@ -14,5 +14,5 @@ class DataProcessingArtifacts:
 
 @dataclass
 class RecomendeTrainingrArtifacts:
-    similarity_matrix_dir_path : str
-    vectors_dir_path : str
+    similarity_matrix_path : str
+    vectorizer_path : str

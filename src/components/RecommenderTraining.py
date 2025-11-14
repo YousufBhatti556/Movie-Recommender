@@ -1,7 +1,7 @@
 from src.logging.logger import logging
 from src.exception_handling.exception import CustomException
 from constants import training_pipeline
-from src.entity.artifact_entity import DataIngestionArtifacts, DataProcessingArtifacts, RecomenderTrainingArtifacts
+from src.entity.artifact_entity import DataIngestionArtifacts, DataProcessingArtifacts, RecomendeTrainingrArtifacts
 from src.entity.config_entity import TrainingPipelineConfig, DataIngestionConfig, DataProcessingConfig, RecommenderTrainingConfig
 import pandas as pd
 import os, sys
@@ -13,7 +13,10 @@ from sklearn.feature_extraction.text import CountVectorizer
 import pickle
 
 class Recommender:
-    def __init(self, training_pipeline_config: TrainingPipelineConfig, recommender_config: RecommenderTrainingConfig, data_processing_artifacts:DataProcessingArtifacts):
+    def __init__(self, training_pipeline_config: TrainingPipelineConfig,
+                 recommender_config: RecommenderTrainingConfig,
+                 data_processing_artifacts: DataProcessingArtifacts):
+
         self.training_pipeline_config = training_pipeline_config
         self.recommender_config = recommender_config
         self.data_processing_artifacts = data_processing_artifacts
@@ -43,19 +46,10 @@ class Recommender:
             logging.info("=== MODEL TRAINING COMPLETED SUCCESSFULLY ===")
 
             # Return artifacts object
-            return RecomenderTrainingArtifacts(
+            return RecomendeTrainingrArtifacts(
                 vectorizer_path=self.recommender_config.vectorizer_path,
                 similarity_matrix_path=self.recommender_config.similarity_matrix_path,
             )
-
-
-
-
-
-
-
-
-
         except Exception as e:
             logging.info(CustomException(e,sys))
             raise CustomException(e, sys)

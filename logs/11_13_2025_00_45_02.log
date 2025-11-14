@@ -1,8 +1,0 @@
-[ 2025-11-13 00:45:04,507 ] - 16 - INFO - \u2705 Data Ingestion completed successfully
-[ 2025-11-13 00:45:04,507 ] - 66 - INFO - Reading from the data ingestion_artifacts ie final_data
-[ 2025-11-13 00:45:05,128 ] - 69 - INFO - Removing the unnecessary columns
-[ 2025-11-13 00:45:05,137 ] - 72 - INFO - Dropping the null values
-[ 2025-11-13 00:45:05,137 ] - 75 - INFO - Processing the text columns to obtain meaningful informations
-[ 2025-11-13 00:45:13,349 ] - 91 - INFO - Add all these columns into 1
-[ 2025-11-13 00:45:13,396 ] - 110 - INFO - error occured in python script [D:\Movie-Recommender\src\components\data_preprocessing.py] line number [98] error message [Cannot save file into a non-existent directory: 'Movie_Recommender\artifacts\data_processing']
-[ 2025-11-13 00:45:13,412 ] - 31 - ERROR - Pipeline failed: error occured in python script [D:\Movie-Recommender\src\components\data_preprocessing.py] line number [98] error message [Cannot save file into a non-existent directory: 'Movie_Recommender\artifacts\data_processing']
