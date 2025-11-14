@@ -3,7 +3,7 @@ from src.exception_handling.exception import CustomException
 from constants import training_pipeline
 from src.entity.config_entity import TrainingPipelineConfig, DataIngestionConfig, DataProcessingConfig
 from src.entity.artifact_entity import DataIngestionArtifacts, DataProcessingArtifacts
-
+from nltk.stem import PorterStemmer
 import pandas as pd
 import sys, os
 import ast
@@ -14,7 +14,7 @@ class DataProcessing:
         self.training_pipeline_config = training_pipeline_config
         self.data_ingestion_artifacts = data_ingestion_artifacts
         self.data_processing_config = data_processing_config
-
+        self.ps = PorterStemmer()
 
     def get_genres(self, obj):
         try:
@@ -61,6 +61,15 @@ class DataProcessing:
         except Exception as e:
             print(e)
 
+    def stem_text(self, text):
+        try:
+            words = text.split()
+            return " ".join([self.ps.stem(word) for word in words])
+        except Exception as e:
+            logging.info(CustomException(e, sys))
+            raise CustomException(e,sys)
+
+
     def initiate_processing(self)->DataProcessingArtifacts:
         try:
             os.makedirs(self.data_processing_config.data_processing_dir, exist_ok=True)
@@ -95,7 +104,8 @@ class DataProcessing:
             df = df[["movie_id", "title", "tags"]]
 
             df["tags"] = df["tags"].apply(lambda x:" ".join(x))
-
+            df["tags"] = df["tags"].apply(lambda x: x.lower())
+            df["tags"] = df["tags"].apply(self.stem_text)
             df.to_csv(self.data_processing_config.final_df, index=False)
 
             data_processing_artifacts = DataProcessingArtifacts(final_df=self.data_processing_config.final_df)

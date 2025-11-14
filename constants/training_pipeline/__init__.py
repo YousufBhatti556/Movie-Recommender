@@ -14,3 +14,9 @@ DATA_PROCESSING_DIR_NAME = "data_processing"
 DATA_PROCESSED_DIR_NAME = "data_processed"
 
 COLUMNS = ['movie_id','title','overview','genres','keywords','cast','crew']
+
+
+
+RECOMMENDER_DIR_NAME = "Recommender"
+RECOMMENDER_VECTORIZER_DIR_NAME = "Vectorizer"
+RECOMMENDER_SIMILARITYMATRIX_DIR_NAME = "SIMILARITY_MATRIX"

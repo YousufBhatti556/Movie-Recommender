@@ -25,4 +25,12 @@ class DataProcessingConfig:
         self.data_processing_dir = os.path.join(training_pipeline_config.artifact_dir, training_pipeline.DATA_PROCESSING_DIR_NAME)
         self.final_df = os.path.join(self.data_processing_dir, "final_df.csv")
 
+
+class RecommenderTrainingConfig:
+    def __init__(self, training_pipeline_config: TrainingPipelineConfig):
+        self.recommender_dir = os.path.join(training_pipeline_config.artifact_dir, training_pipeline.RECOMMENDER_DIR_NAME)
+        self.vectorizer_path = os.path.join(self.recommender_dir, training_pipeline.RECOMMENDER_VECTORIZER_DIR_NAME)
+        self.similarity_matrix_path = os.path.join(self.recommender_dir, training_pipeline.RECOMMENDER_SIMILARITYMATRIX_DIR_NAME)
+
+
         

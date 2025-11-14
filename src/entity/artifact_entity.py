@@ -11,3 +11,8 @@ class DataIngestionArtifacts:
 @dataclass
 class DataProcessingArtifacts:
     final_df: str
+
+@dataclass
+class RecomendeTrainingrArtifacts:
+    similarity_matrix_dir_path : str
+    vectors_dir_path : str
