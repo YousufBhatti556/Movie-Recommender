@@ -38,15 +38,14 @@ class Recommender:
 
             # Save similarity matrix
             logging.info("Saving similarity.pkl")
-            pickle.dump(similarity, open(self.recomm.similarity_matrix_path, "wb"))
+            pickle.dump(similarity, open(self.recommender_config.similarity_matrix_path, "wb"))
 
             logging.info("=== MODEL TRAINING COMPLETED SUCCESSFULLY ===")
 
             # Return artifacts object
-            return ModelTrainerArtifacts(
-                vectorizer_path=self.model_trainer_config.vectorizer_path,
-                similarity_matrix_path=self.model_trainer_config.similarity_matrix_path,
-                processed_df_path=stemmed_df_path
+            return RecomenderTrainingArtifacts(
+                vectorizer_path=self.recommender_config.vectorizer_path,
+                similarity_matrix_path=self.recommender_config.similarity_matrix_path,
             )
 
 
