@@ -1,6 +1,6 @@
 from src.logging.logger import logging
 from src.exception_handling.exception import CustomException
-from constants import training_pipeline
+from src.constants import training_pipeline
 from src.entity.config_entity import TrainingPipelineConfig, DataIngestionConfig, DataProcessingConfig
 from src.entity.artifact_entity import DataIngestionArtifacts, DataProcessingArtifacts
 from nltk.stem import PorterStemmer

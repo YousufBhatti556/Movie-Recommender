@@ -1,13 +1,13 @@
 from src.logging.logger import logging
 from src.exception_handling.exception import CustomException
-from constants import training_pipeline
+from src.constants import training_pipeline
 from src.entity.artifact_entity import DataIngestionArtifacts, DataProcessingArtifacts, RecomenderTrainingrArtifacts
 from src.entity.config_entity import TrainingPipelineConfig, DataIngestionConfig, DataProcessingConfig, RecommenderTrainingConfig
 import pandas as pd
 import os, sys
 import nltk
 from nltk.stem import WordNetLemmatizer, PorterStemmer
-nltk.download('wordnet')
+# nltk.download('wordnet')
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import CountVectorizer
 import pickle

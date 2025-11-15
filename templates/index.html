@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Recommender</title>
+
+    <style>
+        body {
+            background: #0f0f0f;
+            color: white;
+            font-family: Arial;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .input-box {
+            width: 350px;
+            padding: 12px;
+            font-size: 18px;
+            border-radius: 6px;
+            border: none;
+            margin-bottom: 20px;
+        }
+
+        .movie-list {
+            width: 80%;
+            margin: 20px auto;
+            display: flex;
+            overflow-x: auto;
+            gap: 10px;
+            padding: 10px;
+            scrollbar-width: thin;
+        }
+
+        .movie-item {
+            background: #1c1c1c;
+            padding: 10px 18px;
+            border-radius: 8px;
+            white-space: nowrap;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .movie-item:hover {
+            background: #ff9800;
+            color: black;
+        }
+
+        .card {
+            background: #1f1f1f;
+            margin: 12px auto;
+            padding: 15px;
+            width: 350px;
+            border-radius: 8px;
+            font-size: 20px;
+        }
+    </style>
+
+    <script>
+        function selectMovie(name) {
+            document.getElementById("movieInput").value = name;
+        }
+    </script>
+</head>
+
+<body>
+
+    <h1>🎬 Movie Recommender</h1>
+    <p>Select a movie from list OR type manually</p>
+
+    <form action="/recommend" method="POST">
+        <input id="movieInput" name="movie" class="input-box" placeholder="Type movie name..." required />
+        <br>
+        <button style="padding: 10px 25px; font-size: 18px; margin-top: 10px;">Recommend</button>
+    </form>
+
+    <h2 style="margin-top:40px;">All Movies</h2>
+
+    <div class="movie-list">
+        {% for m in movies %}
+            <div class="movie-item" onclick="selectMovie('{{ m }}')">
+                {{ m }}
+            </div>
+        {% endfor %}
+    </div>
+
+    {% if movie %}
+        <h2 style="margin-top:40px;">Top Recommendations for: {{ movie }}</h2>
+
+        {% for rec in recommendations %}
+            <div class="card">{{ rec }}</div>
+        {% endfor %}
+    {% endif %}
+
+    {% if error %}
+        <h2 style="color: red;">{{ error }}</h2>
+    {% endif %}
+
+</body>
+</html>

@@ -1,4 +1,4 @@
-from constants import training_pipeline
+from src.constants import training_pipeline
 from datetime import datetime
 import os
 
