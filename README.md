@@ -1,6 +1,4 @@
-🎬 Movie Recommender — Simple README
-
-Bas copy-paste kar do README.md me — bilkul simple aur seedha:
+🎬 Movie Recommender
 
 # Movie Recommender (Content-Based)
 
@@ -82,4 +80,5 @@ If Flask seems stuck, ensure training is finished before starting the app (or lo
 License
 
 Use for learning and personal projects.
+
 
