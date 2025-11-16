@@ -68,18 +68,6 @@ Type a movie name or click one from the sliding list.
 
 Click Recommend to see top 5 similar movies.
 
-Simple Project Structure
-Movie-Recommender/
-├─ src/                    # Python source (components, pipeline, entities)
-├─ Movie_Recommender/
-│  └─ artifacts/           # trained artifacts (vectorizer, similarity)
-├─ templates/
-│  └─ index.html           # frontend
-├─ app.py                  # flask app
-├─ requirements.txt
-└─ README.md
-
-
 Note: Don’t commit large artifact files (similarity matrix, .pkl) to Git. Add Movie_Recommender/artifacts/ to .gitignore.
 
 Troubleshooting
@@ -94,3 +82,4 @@ If Flask seems stuck, ensure training is finished before starting the app (or lo
 License
 
 Use for learning and personal projects.
+
