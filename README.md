@@ -8,7 +8,7 @@ Type or choose a movie and get top-5 similar movie recommendations.
 ---
 
 ## Features
-- TF-IDF vectorizer on movie text (description/metadata)
+- Count vectorizer on movie text (description/metadata)
 - Cosine similarity based recommendations
 - Artifacts (vectorizer, similarity matrix) saved as `.pkl`
 - Simple Flask web UI: type movie or pick from list → get top 5
@@ -80,5 +80,6 @@ If Flask seems stuck, ensure training is finished before starting the app (or lo
 License
 
 Use for learning and personal projects.
+
 
 
