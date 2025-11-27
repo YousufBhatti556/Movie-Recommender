@@ -63,15 +63,13 @@ Your MovieFlix application should be running at the following address:
 🌐 Open in Browser: http://127.0.0.1:5000
 
 How to Get Recommendations:
-Input: Type your favorite movie's name into the search bar (or select it from the list).
-Output: Click Recommend button to instantly view the Top 5 similar movie suggestions with posters.
+Input: Type your favorite movie's name into the search bar (or select it from the list).<br>
+Output: Click Recommend button to instantly view the Top 5 similar movie suggestions with posters.<br>
 
-⚙️ Essential Best Practices & Troubleshooting
-Category	Issue	Solution / Best Practice
-🚨 Module Error	ModuleNotFoundError: Run modules using the -m flag from the root directory: python -m src.pipeline.training_pipeline
-⏱️ Performance	Flask app takes too long to start:	Ensure the training pipeline (which generates artifacts) has been completed before starting app.py.
-🔒 Git Security	Committing large artifacts (e.g., similarity.pkl).	Do not commit artifact files (similarity matrix, vectorizers). Ensure the Movie_Recommender/artifacts/ folder is added to .gitignore.
-
+Category,Issue,Solution / Best Practice
+🚨 Module Error,ModuleNotFoundError: No module named 'src',Run modules using the -m flag from the root directory: python -m src.pipeline.training_pipeline
+⏱️ Performance,Flask app takes too long to start.,Ensure the training pipeline (which generates artifacts) has been completed before starting app.py.
+🔒 Git Security,"Committing large artifacts (e.g., similarity.pkl).","Do not commit artifact files (similarity matrix, vectorizers). Ensure the Movie_Recommender/artifacts/ folder is added to .gitignore."
 ⚖️ License
 This project is provided for Learning, Exploration, and Personal Projects only. Feel free to explore and modify the code!
 
