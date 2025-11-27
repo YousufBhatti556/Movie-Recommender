@@ -62,9 +62,9 @@ Your MovieFlix application should be running at the following address:
 
 🌐 Open in Browser: http://127.0.0.1:5000
 
-<h4>How to Get Recommendations:</h4><br><br>
+<h4>How to Get Recommendations:</h4><br>
 Input: Type your favorite movie's name into the search bar (or select it from the list).<br><br>
-Output: Click Recommend button to instantly view the Top 5 similar movie suggestions with posters.<br><br><br><br>
+Output: Click Recommend button to instantly view the Top 5 similar movie suggestions with posters.<br><br>
 
 <table style="width: 100%; border-collapse: collapse;">
     <thead>
