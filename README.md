@@ -95,5 +95,3 @@ Output: Click Recommend button to instantly view the Top 5 similar movie suggest
 <h4>⚖️ License</h4><br>
 This project is provided for Learning, Exploration, and Personal Projects only. Feel free to explore and modify the code!
 
-```
-<img width="1415" height="591" alt="image" src="https://github.com/user-attachments/assets/185dfc69-52af-4617-9bfe-37e912741980" />
