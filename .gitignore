@@ -22,3 +22,6 @@ SIMILARITY_MATRIX
 Thumbs.db
 
 
+# Logs files and directories
+logs/
+*.log
