@@ -1,0 +1,23 @@
+[ 2025-11-27 12:08:08,643 ] - 29 - INFO - Initializing Training Pipeline configurations...
+[ 2025-11-27 12:08:08,643 ] - 47 - INFO - ==== Starting Data Ingestion ====
+[ 2025-11-27 12:08:10,779 ] - 56 - INFO - ==== Starting Data Processing ====
+[ 2025-11-27 12:08:10,779 ] - 76 - INFO - Reading from the data ingestion_artifacts ie final_data
+[ 2025-11-27 12:08:11,416 ] - 79 - INFO - Removing the unnecessary columns
+[ 2025-11-27 12:08:11,431 ] - 82 - INFO - Dropping the null values
+[ 2025-11-27 12:08:11,439 ] - 85 - INFO - Processing the text columns to obtain meaningful informations
+[ 2025-11-27 12:08:20,311 ] - 101 - INFO - Add all these columns into 1
+[ 2025-11-27 12:08:25,775 ] - 69 - INFO - ==== Starting Recommender Training ====
+[ 2025-11-27 12:08:25,775 ] - 25 - INFO - Reading the processed dataframe
+[ 2025-11-27 12:08:25,838 ] - 28 - INFO - Vectorizing tags using CountVectorizer
+[ 2025-11-27 12:08:26,253 ] - 32 - INFO - Calculating cosine similarity matrix
+[ 2025-11-27 12:08:28,157 ] - 38 - INFO - Saving vectorizer.pkl
+[ 2025-11-27 12:08:28,208 ] - 42 - INFO - Saving similarity.pkl
+[ 2025-11-27 12:08:28,813 ] - 45 - INFO - === MODEL TRAINING COMPLETED SUCCESSFULLY ===
+[ 2025-11-27 12:08:28,974 ] - 97 - WARNING -  * Debugger is active!
+[ 2025-11-27 12:08:28,994 ] - 97 - INFO -  * Debugger PIN: 134-641-721
+[ 2025-11-27 12:08:29,211 ] - 97 - INFO - 127.0.0.1 - - [27/Nov/2025 12:08:29] "GET / HTTP/1.1" 200 -
+[ 2025-11-27 12:08:37,726 ] - 19 - INFO - Reading the dataframe
+[ 2025-11-27 12:08:37,771 ] - 26 - INFO - Loading the similarity matrix
+[ 2025-11-27 12:08:37,889 ] - 39 - INFO - Recommendations generated for '11:14'
+[ 2025-11-27 12:08:37,924 ] - 97 - INFO - 127.0.0.1 - - [27/Nov/2025 12:08:37] "POST /recommend HTTP/1.1" 200 -
+[ 2025-11-27 12:10:59,140 ] - 97 - INFO -  * Detected change in 'D:\\Movie-Recommender\\src\\utils\\utils.py', reloading

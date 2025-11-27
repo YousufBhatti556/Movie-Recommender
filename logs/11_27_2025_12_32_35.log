@@ -1,0 +1,23 @@
+[ 2025-11-27 12:32:37,505 ] - 29 - INFO - Initializing Training Pipeline configurations...
+[ 2025-11-27 12:32:37,505 ] - 47 - INFO - ==== Starting Data Ingestion ====
+[ 2025-11-27 12:32:39,181 ] - 56 - INFO - ==== Starting Data Processing ====
+[ 2025-11-27 12:32:39,181 ] - 76 - INFO - Reading from the data ingestion_artifacts ie final_data
+[ 2025-11-27 12:32:39,828 ] - 79 - INFO - Removing the unnecessary columns
+[ 2025-11-27 12:32:39,828 ] - 82 - INFO - Dropping the null values
+[ 2025-11-27 12:32:39,828 ] - 85 - INFO - Processing the text columns to obtain meaningful informations
+[ 2025-11-27 12:32:47,883 ] - 101 - INFO - Add all these columns into 1
+[ 2025-11-27 12:32:53,045 ] - 69 - INFO - ==== Starting Recommender Training ====
+[ 2025-11-27 12:32:53,045 ] - 25 - INFO - Reading the processed dataframe
+[ 2025-11-27 12:32:53,092 ] - 28 - INFO - Vectorizing tags using CountVectorizer
+[ 2025-11-27 12:32:53,518 ] - 32 - INFO - Calculating cosine similarity matrix
+[ 2025-11-27 12:32:55,224 ] - 38 - INFO - Saving vectorizer.pkl
+[ 2025-11-27 12:32:55,239 ] - 42 - INFO - Saving similarity.pkl
+[ 2025-11-27 12:32:55,896 ] - 45 - INFO - === MODEL TRAINING COMPLETED SUCCESSFULLY ===
+[ 2025-11-27 12:32:56,044 ] - 97 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[ 2025-11-27 12:32:56,044 ] - 97 - INFO - [33mPress CTRL+C to quit[0m
+[ 2025-11-27 12:32:56,045 ] - 97 - INFO -  * Restarting with stat
+[ 2025-11-27 12:36:49,157 ] - 97 - INFO -  * Restarting with stat
+[ 2025-11-27 12:37:32,083 ] - 97 - INFO -  * Restarting with stat
+[ 2025-11-27 12:37:56,808 ] - 97 - INFO -  * Restarting with stat
+[ 2025-11-27 12:40:14,395 ] - 97 - INFO -  * Restarting with stat

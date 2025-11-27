@@ -1,0 +1,18 @@
+[ 2025-11-27 11:52:43,275 ] - 29 - INFO - Initializing Training Pipeline configurations...
+[ 2025-11-27 11:52:43,276 ] - 47 - INFO - ==== Starting Data Ingestion ====
+[ 2025-11-27 11:52:45,363 ] - 56 - INFO - ==== Starting Data Processing ====
+[ 2025-11-27 11:52:45,363 ] - 76 - INFO - Reading from the data ingestion_artifacts ie final_data
+[ 2025-11-27 11:52:45,998 ] - 79 - INFO - Removing the unnecessary columns
+[ 2025-11-27 11:52:46,014 ] - 82 - INFO - Dropping the null values
+[ 2025-11-27 11:52:46,015 ] - 85 - INFO - Processing the text columns to obtain meaningful informations
+[ 2025-11-27 11:52:54,933 ] - 101 - INFO - Add all these columns into 1
+[ 2025-11-27 11:53:00,266 ] - 69 - INFO - ==== Starting Recommender Training ====
+[ 2025-11-27 11:53:00,274 ] - 25 - INFO - Reading the processed dataframe
+[ 2025-11-27 11:53:00,341 ] - 28 - INFO - Vectorizing tags using CountVectorizer
+[ 2025-11-27 11:53:00,808 ] - 32 - INFO - Calculating cosine similarity matrix
+[ 2025-11-27 11:53:03,811 ] - 38 - INFO - Saving vectorizer.pkl
+[ 2025-11-27 11:53:03,896 ] - 42 - INFO - Saving similarity.pkl
+[ 2025-11-27 11:53:04,775 ] - 45 - INFO - === MODEL TRAINING COMPLETED SUCCESSFULLY ===
+[ 2025-11-27 11:53:05,050 ] - 97 - WARNING -  * Debugger is active!
+[ 2025-11-27 11:53:05,081 ] - 97 - INFO -  * Debugger PIN: 134-641-721
+[ 2025-11-27 11:53:08,712 ] - 97 - INFO -  * Detected change in 'D:\\Movie-Recommender\\src\\utils\\utils.py', reloading

@@ -1,0 +1,17 @@
+[ 2025-11-27 11:05:39,287 ] - 28 - INFO - ========== MOVIE RECOMMENDER PIPELINE STARTED ==========
+[ 2025-11-27 11:05:43,642 ] - 76 - INFO - Reading from the data ingestion_artifacts ie final_data
+[ 2025-11-27 11:05:45,524 ] - 79 - INFO - Removing the unnecessary columns
+[ 2025-11-27 11:05:45,534 ] - 82 - INFO - Dropping the null values
+[ 2025-11-27 11:05:45,541 ] - 85 - INFO - Processing the text columns to obtain meaningful informations
+[ 2025-11-27 11:06:12,994 ] - 101 - INFO - Add all these columns into 1
+[ 2025-11-27 11:06:29,371 ] - 25 - INFO - Reading the processed dataframe
+[ 2025-11-27 11:06:29,464 ] - 28 - INFO - Vectorizing tags using CountVectorizer
+[ 2025-11-27 11:06:30,370 ] - 32 - INFO - Calculating cosine similarity matrix
+[ 2025-11-27 11:06:36,294 ] - 38 - INFO - Saving vectorizer.pkl
+[ 2025-11-27 11:06:36,403 ] - 42 - INFO - Saving similarity.pkl
+[ 2025-11-27 11:06:37,207 ] - 45 - INFO - === MODEL TRAINING COMPLETED SUCCESSFULLY ===
+[ 2025-11-27 11:06:37,287 ] - 49 - INFO - ========== PIPELINE FINISHED SUCCESSFULLY ==========
+[ 2025-11-27 11:06:37,287 ] - 19 - INFO - Reading the dataframe
+[ 2025-11-27 11:06:37,473 ] - 26 - INFO - Loading the similarity matrix
+[ 2025-11-27 11:06:37,671 ] - 39 - INFO - Recommendations generated for 'Batman'
+[ 2025-11-27 11:06:37,718 ] - 58 - INFO - End of project
