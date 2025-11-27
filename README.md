@@ -57,25 +57,23 @@ Run Flask app:
 python app.py
 ```
 
-Open http://127.0.0.1:5000 in your browser.
+🚀 App Usage & Quick Access
+Your MovieFlix application should be running at the following address:
 
-Usage
+🌐 Open in Browser: http://127.0.0.1:5000
 
-Type a movie name or click one from the sliding list.
+How to Get Recommendations:
+Input: Type your favorite movie's name into the search bar (or select it from the list).
+Output: Click Recommend button to instantly view the Top 5 similar movie suggestions with posters.
 
-Click Recommend to see top 5 similar movies.
+⚙️ Essential Best Practices & Troubleshooting
+Category	Issue	Solution / Best Practice
+🚨 Module Error	ModuleNotFoundError: Run modules using the -m flag from the root directory: python -m src.pipeline.training_pipeline
+⏱️ Performance	Flask app takes too long to start:	Ensure the training pipeline (which generates artifacts) has been completed before starting app.py.
+🔒 Git Security	Committing large artifacts (e.g., similarity.pkl).	Do not commit artifact files (similarity matrix, vectorizers). Ensure the Movie_Recommender/artifacts/ folder is added to .gitignore.
 
-Note: Don’t commit large artifact files (similarity matrix, .pkl) to Git. Add Movie_Recommender/artifacts/ to .gitignore.
+⚖️ License
+This project is provided for Learning, Exploration, and Personal Projects only. Feel free to explore and modify the code!
 
-Troubleshooting
-
-If ModuleNotFoundError: No module named 'src' occurs, run modules with -m from project root, e.g.:
-
-python -m src.pipeline.training_pipeline
-
-
-If Flask seems stuck, ensure training is finished before starting the app (or load saved artifacts instead of retraining on start).
-
-License
-
-Use for learning and personal projects.
+```
+<img width="1415" height="591" alt="image" src="https://github.com/user-attachments/assets/185dfc69-52af-4617-9bfe-37e912741980" />
