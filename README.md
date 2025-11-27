@@ -62,9 +62,9 @@ Your MovieFlix application should be running at the following address:
 
 🌐 Open in Browser: http://127.0.0.1:5000
 
-How to Get Recommendations:<br>
-Input: Type your favorite movie's name into the search bar (or select it from the list).<br>
-Output: Click Recommend button to instantly view the Top 5 similar movie suggestions with posters.<br>
+####How to Get Recommendations:<br><br>
+Input: Type your favorite movie's name into the search bar (or select it from the list).<br><br>
+Output: Click Recommend button to instantly view the Top 5 similar movie suggestions with posters.<br><br><br><br>
 
 <table style="width: 100%; border-collapse: collapse;">
     <thead>
@@ -91,7 +91,8 @@ Output: Click Recommend button to instantly view the Top 5 similar movie suggest
             <td style="padding: 10px; border: 1px solid #555;">Do not commit artifact files. Ensure the <code>Movie_Recommender/artifacts/</code> folder is added to **<code>.gitignore</code>**.</td>
         </tr>
     </tbody>
-</table>⚖️ License
+</table><br><br>
+### ⚖️ License<br>
 This project is provided for Learning, Exploration, and Personal Projects only. Feel free to explore and modify the code!
 
 ```
